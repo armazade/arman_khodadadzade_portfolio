@@ -37,8 +37,31 @@
     .accent-bg { background: var(--accent); }
     .accent-border { border-color: var(--accent); }
     .accent-text { color: var(--accent); }
+    .accent-fill { fill: var(--accent); }
     .accent-bg-light { background: rgba(34, 123, 255, 0.10); }
     .accent-bg-xlight { background: rgba(34, 123, 255, 0.035); }
+    .icon-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: #fff;
+      border: 2px solid var(--accent);
+      border-radius: 999px;
+      transition: background 0.15s, border-color 0.15s, color 0.17s;
+      color: var(--accent);
+      margin-right: 8px;
+      margin-bottom: 0;
+      box-shadow: 0 2px 8px rgba(34,123,255,0.07);
+    }
+    .icon-btn:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .icon-btn svg { width: 24px; height: 24px; }
+    .icon-btn:last-child { margin-right: 0; }
   </style>
 </head>
 <body class="text-[#121a26] bg-[#fbfbfb] antialiased">
@@ -58,21 +81,25 @@
         Hi, I'm <span class="ai-underline font-black accent-text">Arman Khodadadzade</span>
       </h1>
       <p class="max-w-xl text-lg md:text-xl text-[#3e4860] mb-7">
-        I craft <span class="font-semibold accent-text">robust backends</span> and smart web apps.
-        Specialized in <span class="accent-text">PHP/Laravel</span>, automation and <span class="accent-text">AI integration</span>.
-        Available for exciting remote or hybrid projects.
+        I craft <span class="font-semibold accent-text">backends</span> and smart web apps.
+        Specializing in <span class="accent-text">PHP/Laravel</span>, automation and <span class="accent-text">AI integration</span>.
+        Available for exciting jobs/projects in the Netherlands.
       </p>
       <div class="flex flex-wrap items-center gap-4 mt-2">
         <a href="#contact"
            class="accent-bg hover:bg-blue-700 text-white text-base font-semibold px-7 py-2.5 rounded-full shadow transition focus:outline-none">
           Contact Me
         </a>
-        <a href="https://github.com/armazade" target="_blank" class="ai-underline font-bold text-base accent-text hover:text-white" rel="noopener">
-          GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/arman-khodadadzade-387a41296/" target="_blank" class="ai-underline font-bold text-base accent-text hover:text-white" rel="noopener">
-          LinkedIn
-        </a>
+          <a href="https://github.com/armazade" class="icon-btn" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 .5A11.5 11.5 0 0 0 .5 12.1a11.6 11.6 0 0 0 7.9 11c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.6-1.5-1.5-1.9-1.5-1.9-1.2-.8.1-.8.1-.8 1.3.1 2 .1 2 .1 1.2 2 3 1.5 3.7 1.1.1-.8.5-1.5.9-1.9-2.5-.3-5.2-1.3-5.2-5.5a4.3 4.3 0 0 1 1.2-3.1c-.1-.3-.5-1.6.1-3.4 0 0 1-.3 3.3 1.2a11.1 11.1 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.8.3 3.1.1 3.4a4.3 4.3 0 0 1 1.2 3.1c0 4.2-2.7 5.2-5.2 5.5.5.4 1 1.3 1 2.6v3.8c0 .4.2.8.8.6a11.6 11.6 0 0 0 8-11A11.5 11.5 0 0 0 12 .5z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/arman-khodadadzade-387a41296/" class="icon-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg fill="currentColor" viewBox="0 0 448 512">
+              <path d="M100 448H7V149h93zm-46.5-340A53.5 53.5 0 1153.5 0a53.5 53.5 0 010 107zm394.5 340h-93V302.4c0-34.7-12.5-58.4-43.7-58.4-23.8 0-38 16-44.3 31.4-2.3 5.6-2.8 13.4-2.8 21.2V448h-93s1.2-241 0-266.5h93V219c12.4-19.2 34.5-46.6 83.7-46.6 61.1 0 106.9 39.8 106.9 125.4V448z"/>
+            </svg>
+          </a>
       </div>
     </div>
   </div>
@@ -85,9 +112,9 @@
     <div class="rounded-2xl border border-[#ebf8f6] bg-white p-7 shadow-card transition card-hover">
       <h2 class="text-xl font-bold mb-3 text-[#121a26]">About Me</h2>
       <p class="text-[#3e4860] mb-5 text-base">
-        Former athlete, passionate software engineer.<br>
-        Into solving real world problems with elegant software solutions.<br>
-        My drive is learning, working together and building things that matter.
+        Former athlete turned software engineer.<br>
+        Passionate about solving real problems with elegant solutions.<br>
+        My drive is continuous learning, collaboration and building things that matter.
       </p>
       <ul class="text-sm text-[#475164] space-y-1">
         <li><b>Nationality:</b> Dutch 🇳🇱</li>
@@ -100,7 +127,7 @@
       <h2 class="text-xl font-bold mb-4 text-[#121a26]">Coding Skills</h2>
       <div class="mb-1">
         <div class="flex justify-between text-sm font-medium mb-0.5">
-          <span>Laravel</span><span class="font-bold accent-text">80%</span>
+          <span>Laravel</span><span class="font-bold accent-text">85%</span>
         </div>
         <div class="w-full accent-bg-xlight h-2 rounded-full">
           <div class="accent-bg h-2 rounded-full transition" style="width:80%"></div>
@@ -108,18 +135,26 @@
       </div>
       <div class="mb-1 mt-4">
         <div class="flex justify-between text-sm font-medium mb-0.5">
-          <span>Vue.js</span><span class="font-bold accent-text">80%</span>
+          <span>Java</span><span class="font-bold accent-text">70%</span>
         </div>
         <div class="w-full accent-bg-xlight h-2 rounded-full">
-          <div class="accent-bg h-2 rounded-full transition" style="width:80%"></div>
+          <div class="accent-bg h-2 rounded-full transition" style="width:70%"></div>
         </div>
       </div>
       <div class="mb-1 mt-4">
         <div class="flex justify-between text-sm font-medium mb-0.5">
-          <span>Python</span><span class="font-bold accent-text">65%</span>
+          <span>Vue.js</span><span class="font-bold accent-text">70%</span>
         </div>
         <div class="w-full accent-bg-xlight h-2 rounded-full">
-          <div class="accent-bg h-2 rounded-full transition" style="width:65%"></div>
+          <div class="accent-bg h-2 rounded-full transition" style="width:70%"></div>
+        </div>
+      </div>
+      <div class="mb-1 mt-4">
+        <div class="flex justify-between text-sm font-medium mb-0.5">
+          <span>Python</span><span class="font-bold accent-text">60%</span>
+        </div>
+        <div class="w-full accent-bg-xlight h-2 rounded-full">
+          <div class="accent-bg h-2 rounded-full transition" style="width:60%"></div>
         </div>
       </div>
       <div class="mb-1 mt-4">
@@ -133,7 +168,7 @@
     </div>
     <!-- Certifications Card -->
     <div class="rounded-2xl border border-[#ebf8f6] bg-white p-7 shadow-card transition card-hover flex flex-col">
-      <h2 class="text-xl font-bold mb-4 text-[#121a26]">Knowledge</h2>
+      <h2 class="text-xl font-bold mb-4 text-[#121a26]">Certifications & Knowledge</h2>
       <ul class="space-y-2 text-base text-[#3e4860] list-disc list-inside">
         <li>Scrum Certificate</li>
         <li>Web & Application Development</li>
@@ -146,7 +181,7 @@
 
   <!-- TIMELINE/EXPERIENCE -->
   <section class="mb-16">
-    <h2 class="text-2xl font-bold mb-7 text-[#121a26]">Career</h2>
+    <h2 class="text-2xl font-bold mb-7 text-[#121a26]">Professional Timeline</h2>
     <div class="relative pl-5 border-l-4" style="border-color:rgba(34,123,255,0.23)">
       <!-- Item 1 -->
       <div class="ml-2">
@@ -199,23 +234,70 @@
           <li>Bridge between sales & engineering teams</li>
         </ul>
       </div>
-      <div class="ml-2 mt-8">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
-          <div>
-            <div class="text-[#121a26] font-bold text-lg">(Semi) Professional Basketball player</div>
-            <div class="text-[#475164] text-sm mb-1"></div>
+    </div>
+  </section>
+
+  <!-- EDUCATION SECTION -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold mb-7 text-[#121a26]">Education</h2>
+    <div class="flex flex-col gap-7">
+
+      <!-- IT Academy Noord-Nederland -->
+      <div class="flex flex-col md:flex-row items-start md:items-center gap-5 bg-white border accent-border rounded-xl shadow-card p-6 card-hover transition">
+        <div class="flex-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-2">
+            <span class="font-bold text-lg accent-text">IT Academy Noord-Nederland</span>
+            <span class="sm:ml-3 text-sm text-[#475164]">Computer Science, Software Engineering</span>
+            <span class="sm:ml-auto text-xs accent-text font-semibold">2024 – 2025</span>
           </div>
-          <span class="accent-bg-xlight accent-text rounded-lg px-3 py-1 text-xs font-semibold w-fit md:w-auto mt-2 md:mt-0">
-              2017 – 2022
-            </span>
+          <div class="mt-2 text-sm text-[#3e4860]">
+            Skills: Computer Science · REST APIs · Angular · Java · Workbench · Scrum · Agile · Maven · Hibernate · TypeScript · Git · MySQL · Spring Boot · Spring Framework · IntelliJ IDEA · Software Development
+          </div>
         </div>
-        <ul class="list-disc pl-5 mt-1 text-[#3e4860] text-sm space-y-0.5">
-          <li>Donar Groningen</li>
-          <li>Aris Leewarden</li>
-          <li>Olimpia Castello (Italy)</li>
-          <li>Gent Hawks (Belgium)</li>
-        </ul>
       </div>
+
+      <!-- Ghent University -->
+      <div class="flex flex-col md:flex-row items-start md:items-center gap-5 bg-white border accent-border rounded-xl shadow-card p-6 card-hover transition">
+        <div class="flex-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-2">
+            <span class="font-bold text-lg accent-text">Ghent University</span>
+            <span class="sm:ml-3 text-sm text-[#475164]">Psychology</span>
+            <span class="sm:ml-auto text-xs accent-text font-semibold">Aug 2022 – Aug 2023</span>
+          </div>
+          <div class="mt-2 text-sm text-[#3e4860]">
+            Skills: Cognitive Psychology · Clinical Psychology · Statistics · Social Psychology
+          </div>
+        </div>
+      </div>
+
+      <!-- Hanze -->
+      <div class="flex flex-col md:flex-row items-start md:items-center gap-5 bg-white border accent-border rounded-xl shadow-card p-6 card-hover transition">
+        <div class="flex-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-2">
+            <span class="font-bold text-lg accent-text">Hanze</span>
+            <span class="sm:ml-3 text-sm text-[#475164]">Propedeuse, Applied Psychology</span>
+            <span class="sm:ml-auto text-xs accent-text font-semibold">Sep 2019 – Jul 2021</span>
+          </div>
+          <div class="mt-2 text-sm text-[#3e4860]">
+            Skills: IBM SPSS
+          </div>
+        </div>
+      </div>
+
+      <!-- Topsport Talent School -->
+      <div class="flex flex-col md:flex-row items-start md:items-center gap-5 bg-white border accent-border rounded-xl shadow-card p-6 card-hover transition">
+        <div class="flex-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-2">
+            <span class="font-bold text-lg accent-text">Topsport Talent School</span>
+            <span class="sm:ml-3 text-sm text-[#475164]">Havo, NG/NT</span>
+            <span class="sm:ml-auto text-xs accent-text font-semibold">Aug 2012 – Jun 2019</span>
+          </div>
+          <div class="mt-2 text-sm text-[#3e4860]">
+            Activities and societies: Student Athlete school. High school combined with playing in the first basketball league in the country.
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -248,16 +330,25 @@
 <!-- CONTACT FORM -->
 <footer class="accent-bg-xlight py-14 mt-10">
   <section id="contact" class="max-w-md mx-auto rounded-2xl bg-white border accent-border px-8 py-10 shadow-card text-center">
+    <!-- Social Icons ROW (CONTACT) -->
+    <div class="flex justify-center gap-3 mb-5">
+      <a href="https://github.com/armazade" class="icon-btn" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .5A11.5 11.5 0 0 0 .5 12.1a11.6 11.6 0 0 0 7.9 11c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.6-1.5-1.5-1.9-1.5-1.9-1.2-.8.1-.8.1-.8 1.3.1 2 .1 2 .1 1.2 2 3 1.5 3.7 1.1.1-.8.5-1.5.9-1.9-2.5-.3-5.2-1.3-5.2-5.5a4.3 4.3 0 0 1 1.2-3.1c-.1-.3-.5-1.6.1-3.4 0 0 1-.3 3.3 1.2a11.1 11.1 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.8.3 3.1.1 3.4a4.3 4.3 0 0 1 1.2 3.1c0 4.2-2.7 5.2-5.2 5.5.5.4 1 1.3 1 2.6v3.8c0 .4.2.8.8.6a11.6 11.6 0 0 0 8-11A11.5 11.5 0 0 0 12 .5z"/>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/arman-khodadadzade-387a41296/" class="icon-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg fill="currentColor" viewBox="0 0 448 512">
+          <path d="M100 448H7V149h93zm-46.5-340A53.5 53.5 0 1153.5 0a53.5 53.5 0 010 107zm394.5 340h-93V302.4c0-34.7-12.5-58.4-43.7-58.4-23.8 0-38 16-44.3 31.4-2.3 5.6-2.8 13.4-2.8 21.2V448h-93s1.2-241 0-266.5h93V219c12.4-19.2 34.5-46.6 83.7-46.6 61.1 0 106.9 39.8 106.9 125.4V448z"/>
+        </svg>
+      </a>
+    </div>
     <h2 class="text-2xl font-bold mb-5 text-[#121a26]">Get in Touch</h2>
-    <p class="mb-8 text-[#3e4860]">Open for collaborations and freelance projects.</p>
-    <form class="flex flex-col gap-3 items-center" autocomplete="off">
-      <input type="text" placeholder="Your Name" class="w-full p-3 border accent-border rounded-lg focus:outline-none focus:border-[#227bff] bg-[#fafdff] text-[#121a26] placeholder-[#a1b3d6] text-base transition">
-      <input type="email" placeholder="Your Email" class="w-full p-3 border accent-border rounded-lg focus:outline-none focus:border-[#227bff] bg-[#fafdff] text-[#121a26] placeholder-[#a1b3d6] text-base transition">
-      <textarea placeholder="Your Message" rows="4" class="w-full p-3 border accent-border rounded-lg focus:outline-none focus:border-[#227bff] bg-[#fafdff] text-[#121a26] placeholder-[#a1b3d6] text-base transition"></textarea>
-      <button type="submit" class="w-full accent-bg hover:bg-blue-700 text-white px-6 py-3 rounded-full font-bold text-base mt-3 transition shadow focus:outline-none">
-        Send Message
-      </button>
-    </form>
+    <p class="mb-8 text-[#3e4860]">Open for collaborations and freelance projects.<br><br>
+      Spambots are getting more clever by the day <br>
+      Given you've found this page just e-mail me at<br><br>
+      [my first name] + ["tje"] + [2001] + [@gmail.com]<br>
+    </p>
   </section>
   <div class="text-center text-[#a3b0b1] mt-12 text-xs">
     &copy; 2025 Arman Khodadadzade
